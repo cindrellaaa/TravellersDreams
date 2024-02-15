@@ -3,13 +3,12 @@
 :root{
 --font_actor : 'Actor';
 --font_aksher : 'Aksher';
---dark_black : #121212;
---light_black : #1E1E1E;
+--dark_black : #0E0E0E;
+--light_black : #0E0E0E;
 --logo_orange : #F68C45;
 --logo_blue : #016080;
 --white : #FFFFFF;
 --green : rgba(44, 152, 42, 0.44);
-
 }
 
 body {
@@ -375,7 +374,7 @@ nav li .active {
     width: 100%;
     margin: 0;
     height: 40.5rem;
-    background-image: url("../assets/background1.png");    
+    background-image: url("../assets/bg1.png");    
     background-size: cover;
     background-position: center;
 }
@@ -680,7 +679,7 @@ nav li .active {
   overflow: hidden;
     margin: 0;
     height: auto;
-    background-image: url("../assets/bacgkground2.png");    
+    background-image: url("../assets/bg2.png");    
     background-size: cover;
     background-position: center;
     padding: 5.5rem;
