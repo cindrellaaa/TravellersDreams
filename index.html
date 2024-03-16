@@ -116,8 +116,8 @@
     <!-- navbar end -->
 
     <section class="sec1">
-      <h2>Your Personal <span>Chauffeur</span> Services</h2>
-      <h3 class="pb-5">Private Chauffeur</h3>
+      <h2>CAR RENTAL <span>DUBAI</span></h2>
+      <h3>Private Chauffeur</h3>
       <div
         class="background-image active"
         style="background-image: url('assets/home/slide1.png')"
@@ -125,14 +125,6 @@
       <div
         class="background-image"
         style="background-image: url('assets/home/slide2.png')"
-      ></div>
-      <div
-        class="background-image"
-        style="background-image: url('assets/home/slide3.png')"
-      ></div>
-      <div
-        class="background-image"
-        style="background-image: url('assets/home/slide4.png')"
       ></div>
     </section>
 
@@ -145,10 +137,10 @@
               <img src="assets/home/chauffeur.jpg" alt="Chauffeur" />
             </div>
             <div class="text-content">
-              <h4 style="margin-top: 20px; font-weight: 700">
+              <h4 style="margin-top: 20px; font-weight: 700; color: white">
                 CHAUFFEUR DRIVE
               </h4>
-              <p>
+              <p style="color: white">
                 Explore our safe and reliable chauffeur drive services with a
                 diverse range of cars.
               </p>
@@ -161,8 +153,10 @@
               <img src="assets/home/banner.jpg" alt="Hire a Driver" />
             </div>
             <div class="text-content">
-              <h4 style="margin-top: 20px; font-weight: 700">HIRE A DRIVER</h4>
-              <p>
+              <h4 style="margin-top: 20px; font-weight: 700; color: white">
+                CAR RENTAL
+              </h4>
+              <p style="color: white">
                 Enjoy peace of mind with our professional drivers for a secure
                 ride in various cars.
               </p>
@@ -175,8 +169,10 @@
               <img src="assets/home/tour.jpg" alt="City Tour" />
             </div>
             <div class="text-content">
-              <h4 style="margin-top: 20px; font-weight: 700">TOUR PACKAGES</h4>
-              <p>
+              <h4 style="margin-top: 20px; font-weight: 700; color: white">
+                TOUR PACKAGES
+              </h4>
+              <p style="color: white">
                 Explore tour packages for a safe and enjoyable journey with our
                 unique packages.
               </p>
@@ -190,7 +186,9 @@
 
     <!-- our fleet section start -->
     <section class="fleet">
-      <h3 style="color: #f68c45; font-weight: 700">PRIVATE CHAUFFEUR</h3>
+      <h3 class="mt-5" style="color: #f68c45; font-weight: 700">
+        PRIVATE CHAUFFEUR
+      </h3>
       <div class="owl-carousel owl-theme">
         <!-- loop item start -->
         <div class="item">
@@ -643,14 +641,36 @@
     <script>
       let currentIndex = 0;
       const images = document.querySelectorAll(".background-image");
+      const headings = document.querySelectorAll("h2, h3");
 
-      function nextImage() {
+      // Content for different slides
+      const slideContent = [
+        {
+          heading: "CAR RENTAL <span>DUBAI</span>",
+          subheading: "Private Chauffeur",
+        },
+        {
+          heading: "<span>DUBAI</span> TOUR DEALS",
+          subheading: "Travel Without Dreams",
+        },
+        // Add more slide content as needed
+      ];
+
+      function nextSlide() {
+        // Remove active class from current image and heading elements
         images[currentIndex].classList.remove("active");
+        headings.forEach((heading) => (heading.innerHTML = ""));
+
+        // Increment currentIndex to get the next image and content
         currentIndex = (currentIndex + 1) % images.length;
+
+        // Set active class for the next image and update content
         images[currentIndex].classList.add("active");
+        headings[0].innerHTML = slideContent[currentIndex].heading;
+        headings[1].innerHTML = slideContent[currentIndex].subheading;
       }
 
-      setInterval(nextImage, 5000); // Change the duration (in milliseconds) between slides as needed
+      setInterval(nextSlide, 5000);
     </script>
 
     <!-- Bootstrap JS CDN -->

@@ -7,7 +7,7 @@
   --logo_orange: #F68C45;
   --logo_blue: #016080;
   --white: #FFFFFF;
-  --green: rgba(44, 152, 42, 0.44);
+  --green: rgba(44, 152, 42);
 }
 
 body {
@@ -31,12 +31,11 @@ h3 {
   font-family: Akshar;
   font-size: 2.25rem;
   line-height: 114%;
-  margin-top: 35px;
   margin-bottom: 35px;
 }
 
 h4 {
-  color: #FFF;
+  color: var(--white);
   font-family: Akshar;
   font-size: 1.5rem;
   font-style: normal;
@@ -45,7 +44,7 @@ h4 {
 }
 
 h5 {
-  color: #FFF;
+  color: var(--white);
   text-align: center;
   font-family: Akshar;
   font-size: 6rem;
@@ -64,7 +63,7 @@ h2 span {
 }
 
 p {
-  color: #FFF;
+  color: var(--white);
   text-align: justify;
   font-size: 1rem;
   font-style: normal;
@@ -82,7 +81,7 @@ a {
 }
 
 .container-light {
-  background-color: var(--light_black);
+  background-color: var(--dark_black);
 }
 
 .orange_title {
@@ -129,6 +128,18 @@ a {
   justify-content: center;
 }
 
+.sec1 a {
+  font-size: 23px;
+  border-radius: 1.25rem;
+  background: var(--white);
+  color: var(--dark_black);
+  text-align: center;
+  margin-top: 2.63rem;
+  width: 9rem;
+  height: 2.5rem;
+  padding: 0.125rem 1rem;
+}
+
 nav {
   width: 100%;
   position: fixed;
@@ -162,7 +173,7 @@ nav > ul > li {
 }
 
 nav > ul > li > a {
-  color: var(--logo_orange);
+  color: var(--white);
   text-decoration: none;
   text-transform: uppercase;
   padding: 5px 20px;
@@ -194,7 +205,7 @@ nav .contact {
 }
 
 nav.black {
-  background: var(--dark_black);
+  background-color: var(--dark_black);
   height: 90px;
 }
 
@@ -266,7 +277,7 @@ nav li .active {
 }
 
 .background-image {
-  box-shadow: 0px 900px 4px 0px rgba(0, 0, 0, 0.7) inset;
+  box-shadow: 0px 900px 4px 0px rgba(0, 0, 0, 0.4) inset;
   position: absolute;
   top: 0;
   left: 0;
@@ -322,7 +333,7 @@ nav li .active {
   }
 }
 .header-service {
-  background-color: var(--light_black);
+  background-color: var(--dark_black);
   width: 100%;
 }
 
@@ -391,8 +402,8 @@ nav li .active {
   padding: 30px;
   width: 97%;
   height: auto;
-  border: 1px solid #FFF;
-  background: var(--light_black);
+  border: 1px solid var(--white);
+  background: var(--dark_black);
   position: relative;
 }
 
@@ -431,7 +442,7 @@ nav li .active {
 }
 
 .item .text {
-  color: #FFF;
+  color: var(--white);
   font-family: Akshar;
   font-size: 0.9375rem;
   font-style: normal;
